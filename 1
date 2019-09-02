@@ -1,0 +1,138 @@
+
+#include<stdio.h>
+struct node
+{
+int data;
+struct node *next;
+};
+struct node *empty(struct node *start, int data);
+struct node *beg(strct node *start,int data);
+struct node *end(struct node *start,int data);
+struct node *pos(struct node *start,int data,int position);
+void display(struct node *);
+int main()
+{
+struct node *start=NULL;
+int n,data,position;
+do
+{
+printf("\nmain menu");
+printf("\n1.empty list);
+printf("\n2. begin");
+printf("\n3.end");
+printf("\n4.position");
+printf("\n5.display");
+printf("\nenter your number);
+scanf("%d",&n);
+switch(n)
+{
+case 1:
+if(start!=NULL)
+break;
+printf("\nenter no.");
+scanf("%d",&data);
+start=empty(start,data);
+break;
+case 2:
+printf("\nenter element");
+scanf("%d",&data);
+start=beg(start,data);
+break;
+case 3:
+printf("\nenter element");
+scanf("%d",&data);
+start=end(start,data);
+break;
+case 4:
+printf("\n enter number");
+scanf("%d",&data);
+printf("\nenter position");
+scanf("%d",&position);
+start=pos(start,data);
+break;
+case 5:
+display(start);
+break;
+default:
+printf("\nwrong");
+}
+while(n!=6);
+}
+return 0;
+}
+struct node *empty(struct node *start,int data)
+{
+struct node *ptr,int val;
+ptr=(struct node *)malloc(sizeof(struct node));
+start=ptr;
+ptr->data=val;
+ptr->next=NULL;
+return start;
+}
+struct node *beg(struct node *start,int data)
+{
+ struct node *ptr;
+ ptr=(struct node*)malloc(sizeof(struct node));
+ ptr->data=NULL;
+ ptr->next=start;
+ start=ptr;
+ return start;
+ }
+ struct node *end(struct node *start,int data);
+ {
+   struct node *ptr,*temp;
+   temp=(struct node *)malloc(sizeof(struct node));
+   temp->data=val;
+   p=start;
+   while(p->!=NULL)
+   {
+   ptr=ptr->next;
+   }
+   p->next=temp;
+   temp->next=NULL;
+   return start;
+   }
+   struct node *pos(struct node *start,int data,int position)
+   {
+   struct node *p,*temp;
+   int i;
+   temp=(struct node *start(sizeof(struct node));
+   temp->data=val;
+   if(pos==1)
+   {
+   temp->next=start;
+   start=temp;
+   return start;
+   }
+   p=start;
+   for(i=1;i<pos-1 && p!=NULL;i++)
+   {
+   p=p->next;
+   }
+   if(p==NULL)
+   {
+   printf("\nempty");
+   }
+   else
+   {
+   temp->next=p->next;
+   p->next=temp;
+   }return start;
+   }
+   void display(struct node *start)
+   {
+   struct node *p;
+   if(start==NULL)
+   {
+   printf("\nempty");
+   }
+   else
+   {
+   p=start;
+   printf("\n ");
+   while(p!=NULL)
+   {
+   p=p->next;
+   printf("%d",ptr->data);
+   }}
+   }
